@@ -1,0 +1,1 @@
+<header><div id="masthead"><h1><a href="/">Paul May</a></h1></div><div id="primary">{% include primary_nav %}</div></header>

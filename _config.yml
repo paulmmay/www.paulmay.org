@@ -1,0 +1,18 @@
+markdown: Kramdown
+highligher: false
+permalink: /:categories/:title
+exclude: ["README.md", "Gemfile","Gemfile.lock"]
+name: Paul May
+description: Paul May's Blog
+url: http://www.paulmay.org
+
+# this goes inside _config.yml. Change as required
+navigation:
+- text: Home
+  url: /
+  cleanurl: /
+  layout: home
+- text: About
+  url: /about/index.html
+  cleanurl: /about/
+  layout: about

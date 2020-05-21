@@ -1,0 +1,770 @@
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+/************** Foundations ***********************/
+
+html{
+	font-size: 18px;
+	line-height: 1.5em;
+}
+
+body {
+	 text-rendering: optimizeLegibility;
+	 padding: 0;
+	 font-family: helvetica, sans-serif;
+	 background-color: hsl(0, 0%, 98%);
+	 color: hsl(0, 0%, 30%);
+}
+
+/************** Sitewide Typography ***********************/
+
+h1{
+	font-size:2rem;
+	line-height:1.5em;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	text-transform: uppercase;
+	color:hsl(0, 0%, 5%);
+	margin-bottom:1em;
+}
+
+h2{
+	font-size:1.4rem;
+	line-height: 1.5em;
+	font-weight:400;
+	color:hsl(0, 0%, 40%);
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+	margin-bottom:1em;
+}
+
+h3{
+	font-size:1rem;
+	font-weight:600;
+	line-height: 1.5em;
+	color:hsl(0, 0%, 10%);
+	/*text-transform: uppercase;*/
+	-webkit-font-smoothing: antialiased;
+	margin-bottom:1em;
+}
+
+p{
+	font-weight: 100;
+	font-size: 1rem;
+	line-height: 1.5em;
+	margin-bottom:1.5em;
+}
+
+ul{
+	font-size: 1rem;
+	font-weight: 100;
+	line-height:1.5em;
+	list-style: disc;
+	margin-bottom:1.5em;
+}
+
+ol{
+	list-style-type: decimal-leading-zero;
+	font-size: 1rem;
+	font-weight: 100;
+	line-height:1.5em;
+	list-style: disc;
+	margin-bottom:1.5em;
+}
+
+a{
+	text-decoration:none;
+	font-weight:inherit;
+	color:hsl(0, 0%, 10%);
+	border-bottom:1px solid hsl(0, 0%, 60%);
+}
+
+a:hover{
+	color:hsl(0, 0%, 30%);
+		border-bottom:1px solid hsl(0,0%,20%);
+}
+
+.button{
+	color:hsl(0, 0%, 10%);
+	padding: 0.5rem 1rem 0.5rem;
+	border: 1px solid black;
+	font-size: 70%;
+	font-weight:200;
+	text-transform: uppercase;
+}
+
+.borderless{
+	border:none;
+}
+
+
+h1 a{
+color:rgba(51, 51, 51, 1);
+border-bottom:none;
+text-decoration:none;
+}
+
+h1 a:hover{
+	border-bottom:none;
+	color:hsl(0, 0%, 20%);
+}
+
+.strong{
+	font-weight:800;
+	color:hsl(0, 0%, 28%);
+}
+
+/************** Typography Variants ***********************/
+
+h3.jobtitle{
+	font-size:1rem;
+	font-weight:600;
+	line-height: 1.5em;
+	color:hsl(0, 0%, 10%);
+	/*text-transform: uppercase;*/
+	-webkit-font-smoothing: antialiased;
+	margin-bottom: 0rem;
+}
+
+h3.pubtitle{
+	font-size:1rem;
+	font-weight:600;
+	line-height: 1.5em;
+	color:hsl(0, 0%, 10%);
+	/*text-transform: uppercase;*/
+	-webkit-font-smoothing: antialiased;
+	margin-bottom: 0rem;
+}
+
+#expertise h3{
+border-bottom: 1px solid #ccc;
+}
+
+/************** Typography Noodly Bits ***********************/
+
+.datetime{
+	text-transform: uppercase;
+	color:hsl(0, 0%, 60%);
+	display: block;
+	line-height: 1.5rem;
+}
+
+::selection {
+	background: hsl(43, 100%, 54%);
+	}
+::-moz-selection {
+	background: hsl(43, 100%, 54%);
+}
+
+/************** Sitewide Layout ***********************/
+
+
+/* --------------- Header --------------- */
+
+header{
+	display:block;
+	background-color: #fff;
+	padding:1rem;
+	/*fixit*/
+	position:fixed;
+	width:100%;
+	top:0;
+	z-index:1; /*pump it up*/
+}
+
+header li{
+	display:inline;
+}
+
+.nav{
+	max-width:300px;
+	display:inline;
+	margin-left:2em;
+}
+
+.nav.main{
+	font-size:1rem;
+	line-height: 1.5em;
+}
+
+.nav.main li{
+	margin-left:1em;
+}
+
+.nav.main li:first-child{
+	margin-left:0;
+}
+
+.nav.main a{
+	text-decoration: none;
+	font-weight:200;
+	color:hsl(0, 0%, 10%);
+	border-bottom:1px solid hsl(0, 0%, 60%);
+}
+
+.nav.main a:hover{
+	/*text-decoration: none;*/
+	color:hsl(0, 0%, 50%);
+}
+
+.nav.main a.visited{
+	/*text-decoration: none;*/
+	color:hsl(0, 0%, 55%);
+	border-bottom:1px solid hsl(0, 0%, 50%);
+}
+
+/* --------------- Footer --------------- */
+footer{
+	display:block;
+	background-color: #000;
+	padding:1rem;
+}
+
+
+footer ul{
+	list-style: none;
+	margin-left:2em;
+	margin-bottom:0;
+}
+
+footer ul li{
+	display:inline;
+	margin-left:1em;
+}
+
+footer ul li:first-child{
+	margin-left:0;
+}
+
+footer ul a{
+	text-decoration: none;
+	font-weight:200;
+	color:hsl(0, 0%, 70%);
+	border-bottom:1px solid hsl(0, 0%, 30%);
+}
+
+footer ul a:hover{
+	/*text-decoration: none;*/
+	color:hsl(0, 0%, 80%);
+}
+
+footer ul a.visited{
+	/*text-decoration: none;*/
+	color:hsl(0, 0%, 90%);
+	border-bottom:1px solid hsl(0, 0%, 50%);
+}
+
+footer.fixed{
+	position:fixed;
+	width:100%;
+	bottom:0;
+	left:0;
+}
+
+/* --------------- Containers --------------- */
+
+.left.content.home{
+padding-bottom: 2.5rem;
+/*border-bottom: 1px solid black;*/
+}
+
+.right{
+	width:15%;
+	/*padding: 3rem 0 2rem 0;*/
+	letter-spacing: 0.015rem;
+	font-size: 0.7rem;
+	line-height: 1rem;
+	color:#838383;
+}
+
+.below{
+	margin-bottom:1rem;
+}
+
+.above{
+	margin-top:1rem;
+}
+/*general container*/
+.wrapper{
+	margin-left:3rem;
+	max-width:1000px;
+}
+/*very top container*/
+.wrapper.top{
+	margin-top:6rem;
+	margin-bottom:2rem;
+}
+
+.wrapper.main{
+	/*padding:1rem 0 1.5rem 3rem;*/
+}
+
+.wrapper.work{
+	padding:1rem 0 0 3rem;
+}
+
+.wrapper.main:last-child{
+	background-color: red;
+}
+
+.top{
+	margin-top:100px;
+}
+
+.bottom{
+	/*background-color: hsl(240,4.2%,81.2%);*/
+	display:block;
+	text-align:center;
+	vertical-align: baseline;
+}
+
+.max50{
+max-width:50%;
+}
+
+
+.left{
+  width:80%;
+  padding-right: 5%;
+}
+
+.bleed{
+  width:100%;
+}
+
+
+.blurb{
+	width:70%;
+	padding-right: 5%;
+}
+
+.featured{
+	width:25%;
+}
+
+.smaller{
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+
+.block{
+	display:block;
+}
+
+/* --------------- Images --------------- */
+figure img{
+	margin-bottom: 1rem;
+	width:100%;
+}
+
+.photo, img.fullwidth{
+width:100%;
+height:auto;
+margin:1.8rem auto;
+display:block;
+box-sizing: border-box;
+}
+
+figure img.photo{
+width:100%;
+height:auto;
+margin:1.8rem 0 0.5rem 0;
+display:block;
+box-sizing: border-box;	
+}
+
+figure{
+	margin-bottom:1.8rem;
+}
+
+figcaption{
+	font-size:70%;
+	line-height: 1.2em;
+}
+
+/************** Page-specific styles ***********************/
+
+/* --------------- Home --------------- */
+
+/*TBD*/
+
+/* --------------- About --------------- */
+#experience ul, #publications ul, #education ul{
+	list-style: none;
+	margin:0;
+}
+
+#expertise{
+	margin-bottom:1rem;
+}
+
+#expertise ul{
+	list-style: disc;
+	margin-left:1rem;
+}
+
+#experience{
+	margin-top:1.5rem;
+}
+
+
+li.job, li.pub, li.ed{
+	font-family: helvetica;
+	font-weight: 100;
+	margin-bottom: 1.8rem;
+}
+
+.area{
+	padding:0.5rem 0 0.5rem 0;
+	position:relative;
+	border-top:1px solid hsl(0, 0%, 80%);
+}
+
+#expertise .area:last-child{
+	border-bottom:1px solid hsl(0, 0%, 80%);
+}
+
+/* Checkbox Hacks */
+
+input[type=checkbox] {
+   position: absolute;
+   top: -9999px;
+   left: -9999px;
+}
+label { 
+	/*background-color: #ccc;*/
+	display: inline-block;
+	cursor: pointer;
+	font-size:1rem;
+	font-weight:600;
+	line-height: 2em;
+	color:hsl(0, 0%, 10%);
+	/*text-transform: uppercase;*/
+	-webkit-font-smoothing: antialiased;
+	padding:0.5rem 0 0.5rem 0;
+	/*margin-top:1px solid black;*/
+}
+
+.hide1 {
+	margin-top:0.5rem;
+   display:none;
+}
+.hide2 {
+	margin-top:0.5rem;
+   display:none;
+}
+.hide3 {
+	margin-top:0.5rem;
+   display:none;
+}
+.hide4 {
+	margin-top:0.5rem;
+   display:none;
+}
+
+input[type=checkbox]:checked ~ .hide1 {
+   display:block;
+}
+input[type=checkbox]:checked ~ .hide2 {
+   display:block;
+}
+input[type=checkbox]:checked ~ .hide3 {
+   display:block;
+}
+input[type=checkbox]:checked ~ .hide4 {
+   display:block;
+}
+
+.expander{
+	display:block;
+	font-weight: 100;
+	font-size:0.8rem;
+	line-height: 1em;
+	border-bottom:1px solid black;
+	position:absolute;
+	right:1rem;
+	top:1.6rem;
+}
+
+.expander:hover{
+	color:hsl(0, 0%, 30%);
+		border-bottom:1px solid hsl(0,0%,20%);
+}
+
+
+/*Portfolio Stuff*/
+
+#fyeo{
+	padding:1rem;
+	background-color: hsla(43, 100%, 54%, 0.22);
+	margin-bottom:2rem;
+}
+
+/* --------------- Project / Portfolio Item --------------- */
+
+#testimonial{
+	background-color: #000;
+	padding: 1rem;
+
+}
+
+#testimonial p{
+	color: #eee;
+	font-size: inherit;
+	/*line-height: 1.4em;*/
+}
+
+#testimonial h3{
+	color: #eee;
+	font-weight:bold;
+	border-bottom:none;
+}
+
+/************** Article Styles ***********************/
+
+/* --------------- Article --------------- */
+.promo.articles{
+	max-width:50%;
+}
+
+/* Article > Content */
+
+
+
+
+.content  p:last-child{
+	margin-bottom:0;
+}
+
+/* --------------- Other --------------- */
+
+
+
+.minibio{
+	text-align:center;
+}
+
+.minibio a{
+text-decoration:none;
+color:hsl(0,2.9%,27.1%);
+}
+
+/*.minibio a{
+text-decoration:underline;
+color:hsl(0,100%,0%);
+}
+*/
+.elsewhere{
+	margin-top:0.5rem;
+}
+
+/* Previously */
+
+.previously{
+	border-top:4px double hsl(0, 0%, 75%);
+	width:50%;
+}
+
+.previously li{
+	/*font-family: 'Neuton', serif;*/
+	/*font-size: 1.5rem;*/
+	/*line-height:2rem;*/
+}
+
+.previously li a{
+	/*text-decoration: none;*/
+	/*color: hsl(0, 0%, 20%);*/
+}
+
+.pagination{
+	margin:0.7rem 0 0.7rem 0;
+	padding:1em 0 0 0;
+	/*border-top:4px double hsl(0, 0%, 75%);*/
+}
+
+.double-top{
+	border-top:4px double hsl(0, 0%, 75%);
+}
+
+a.previous-link{
+	float:left;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+a.next-link{
+	clear:right;
+	float: right;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+/*Misc Showoffery*/
+
+
+
+/* Images */
+
+
+
+
+/*Testimonial*/
+
+#testimonial{
+	background-color: #000;
+	padding: 1rem;
+
+}
+
+#testimonial p{
+	color: #eee;
+	font-size: 0.8em;
+	line-height: 1.4em;
+}
+
+#testimonial h3{
+	color: #eee;
+	font-weight:bold;
+	border-bottom:none;
+}
+
+div.testimonial-author a{
+	text-decoration:none;
+	font-size: 0.8em;
+	font-weight: bold;
+	color: #eee;
+	border-bottom: 1px solid;
+	border-bottom-color: #ffbd14;
+}
+
+div.testimonial-author a:hover{
+	font-size: 0.8em;
+	font-weight: bold;
+	color: #eee;
+	border-bottom: 1px solid;
+	border-bottom-color: rgb(255, 189, 20);
+}
+
+span.testimonial-author-title{
+	font-size: 0.8em;
+	color: #ccc;
+}
+
+/*UXR Index*/
+
+li.uxr-p-slug{
+	padding: 1rem;
+	margin-bottom: 1rem;
+	background: #000;
+	color: #eee;
+}
+
+.uxr-slug-date{
+	color:hsl(0, 0%, 60%);
+	font-size: 80%;
+}
+
+ul li.uxr-p-slug a{ 
+	font-weight: bold;
+	text-decoration: none;
+	color: #eee;
+	border-bottom: 1px solid rgb(255, 189, 20);
+}
+
+p.uxr-slug.datetime{
+	margin-top:0.25rem;
+}
+
+.uxrportfolio h3{
+	padding-bottom:0.25rem;
+	color:hsl(0, 0%, 5%);
+	font-weight: 600;
+	margin-bottom:1em;
+	border-bottom: 1px solid #ccc;
+	
+}
+
+div.uxrportfolio{
+	padding-bottom:3rem;
+}
+
+ul.publications a{ 
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+	border-bottom: 1px solid rgb(255, 189, 20);
+}
+
+a.fancy{
+	font-weight: bold;
+	color: #333;
+}
+
+ul.publications li{ 
+	padding: 1rem;
+	margin-bottom: 1rem;
+	color: #333;
+	background-color:#eee;
+}
+
+
+
+
+/*Responsive Test*/
+
+/*Tiny Little Screens*/
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  html{
+  	font-size: 16px;
+	line-height: 1.5em;
+  }
+  body {
+    /*background-color: red;*/
+  }
+
+  /************** Sitewide Typography ***********************/
+  h1{
+  	margin-bottom:1rem;
+  }
+
+  /************** Sitewide Layout ***********************/
+
+  /* --------------- Header --------------- */
+
+  	.nav{
+  		/*padding will handle whitespace left*/
+  		margin-left:0;
+  	}
+
+/* --------------- Containers --------------- */
+  	.wrapper{
+  		/*margin-left:1rem;*/
+  		margin-left:1rem;
+  	}
+
+  	.wrapper.top{
+  		margin-top:5rem;
+  		margin-bottom:1rem;
+  	}
+
+	.left{
+		width:95%;
+		margin-right:1rem;
+		padding-right:0;
+	}
+
+
+	.minibio{
+		display:none;
+	}
+
+	/* --------------- Footer --------------- */
+
+	footer ul{
+		margin-left:0;
+	}
+
+}

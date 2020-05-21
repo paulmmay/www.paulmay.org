@@ -1,0 +1,6 @@
+.DS*
+_drafts
+Gemfile
+Gemfile.lock
+_site
+.jekyll-cache/
